@@ -12,9 +12,16 @@ toggleBtn.addEventListener('click', () => {
 });
 
 function toggleSom() {
-  if (som.muted) {
+  console.log("Botão clicado");
+
+  if (som.paused || som.muted) {
     som.muted = false;
+    som.play();
   } else {
-    som.muted = true;
+    som.pause();
   }
 }
+
+
+
+
